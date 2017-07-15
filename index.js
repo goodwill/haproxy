@@ -291,10 +291,11 @@ HAProxy.prototype.enable = function enable(backend, server, fn) {
 };
 
 /**
- * Set the server attribute
+ * Set the server state to [ ready / maint / drain ]
  *
  * @param {String} backend Name of the backend server.
  * @param {String} server The server that needs to be disabled in the backend.
+ * @param {String} newState new state for the server [ ready / maint / drain ]
  * @param {Function} fn Callback.
  * @api public
  */
